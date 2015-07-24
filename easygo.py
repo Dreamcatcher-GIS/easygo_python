@@ -71,9 +71,12 @@ def _read_body(obj):
 
 
 class EasygoClient(object):
-    def __init__(self,openid,domain='http://easygo.qq.com'):
+    def __init__(self,openid='ot5aas1gv5RQ1dOFrlqBp4HcvKqM',domain='http://easygo.qq.com'):
         self.openid = openid
         self.domain = domain
+
+    def setOpenid(openid)
+        self.openid = openid
 
     def __getattr__(self,attr):
         return _Callable('%s/%s'%(self.domain,attr),self.openid)
