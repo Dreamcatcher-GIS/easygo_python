@@ -88,7 +88,6 @@ class _Callable(object):
             params = 'openid=%s&%s'%(self.openid,_encode_params(**kw))
             http_url = '%s?%s'%(self.client,params) if self.method=='get' else self.client
             http_body = None if self.method == 'get' else params
-            print http_url
             req = urllib2.Request(http_url,data=http_body)
             req.add_header('Accept-Encoding', 'gzip')
             try:
